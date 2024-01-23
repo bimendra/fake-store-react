@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "install": "^0.13.0",
+    "npm": "^10.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "@types/react": "18.2.48",
-    "@types/react-dom": "18.2.18"
+    "react-router-dom": "^6.21.3"
   },
   "scripts": {
     "start": "react-scripts start",
