@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import { BiCart } from "react-icons/bi";
 
-import './style.css';
+import Header from './components/Header';
 
 export const App: FC<{ name: string }> = ({ name }) => {
   return (
-    <div>
-      <BiCart />
+    <div>      
+      <Header />
     </div>
   );
 };
