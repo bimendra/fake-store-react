@@ -12,17 +12,22 @@ const root = createRoot(document.getElementById('app'));
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <h1>Home</h1>
-  },
-  {
-    path: 'clothing',
-    element: <h1>Clothing</h1>
+    element: <App />,
+    children: [
+      {
+        path: 'clothing',
+        element: <h1>Clothing</h1>
+      }
+    ]
   }
+  
 ])
 
 root.render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Reset />
+    <GlobalStyles />
+    <ThemeProvider theme={theme.light}><RouterProvider router={router} /></ThemeProvider>
   </StrictMode>
 );
 

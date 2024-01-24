@@ -1,12 +1,6 @@
-import { FC } from 'react';
-import { BiCart } from "react-icons/bi";
+import { Outlet } from 'react-router-dom';
+import { Header } from './components/Header';
 
-import Header from './components/Header';
-
-export const App: FC<{ name: string }> = ({ name }) => {
-  return (
-    <div>      
-      <Header />
-    </div>
-  );
-};
+export function App() {
+  return <><Header /><Outlet /></>
+}
