@@ -7,6 +7,9 @@ import { theme } from './common-styles/Theme';
 import { GlobalStyles } from './common-styles/global.styles';
 import { Reset } from 'styled-reset';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { ProductList } from './features/ProductList';
+import { Provider } from 'react-redux';
+import { store } from './store';
 const root = createRoot(document.getElementById('app'));
 
 const router = createBrowserRouter([
@@ -15,8 +18,8 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: 'clothing',
-        element: <h1>Clothing</h1>
+        path: 'products',
+        element: <ProductList />
       }
     ]
   }
@@ -25,9 +28,11 @@ const router = createBrowserRouter([
 
 root.render(
   <StrictMode>
-    <Reset />
+   <Provider store={store}>
+   <Reset />
     <GlobalStyles />
     <ThemeProvider theme={theme.light}><RouterProvider router={router} /></ThemeProvider>
+   </Provider>
   </StrictMode>
 );
 
