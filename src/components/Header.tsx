@@ -22,9 +22,6 @@ const Logo = styled.div`
 export function Header() {
     return <HeaderWrapper>
         <Logo><Link to={'/'}>FakeStore</Link></Logo>
-        <NavBar>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
-        </NavBar>
+        <NavBar />
     </HeaderWrapper>
 }
